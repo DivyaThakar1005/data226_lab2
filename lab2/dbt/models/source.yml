@@ -1,0 +1,22 @@
+version: 2
+sources:
+  - name: raw_data
+    database: dev
+    schema: raw_data
+    description: "Schema which stores raw tables (ETL)"
+    tables:
+      - name: stock_price
+        identifier: stock_price
+        description: "stock data "
+  - name: analytics
+    database: dev
+    schema: analytics
+    description: "Schema with stores analytics tables (ELT)"
+    tables:
+      - name: stock_prices_weekly_avg
+        identifier: stock_prices_weekly_avg
+        description: "Complete weekly avg prices"
+      - name: stock_prices_range
+        identifier: stock_prices_range
+        description: "Complete range of prices"
+        
